@@ -2,6 +2,12 @@
 const Koa = require("koa");
 const app = new Koa();
 
+// handle error
+
+app.on('error', (err, cxt) => {
+	console.log('server error::', err, cxt);
+});
+
 // x-response-time
 app.use(async (ctx, next) => {
 	const start = Date.now();
@@ -22,7 +28,7 @@ app.use(async (ctx, next) => {
 // response
 
 app.use(async ctx => {
-	ctx.body = 'Hello World';
+	ctx.body = 'Hello World' + `${notdefined}`;
 	console.log(`${ctx.method} ${ctx.url} - Hello World`);
 });
 
