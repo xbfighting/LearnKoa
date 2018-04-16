@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "debug": "^3.1.0",
-    "koa": "^2.5.0"
+    "koa": "^2.5.0",
+    "npm": "^5.8.0"
   },
   "devDependencies": {
     "babel-register": "^6.26.0"
